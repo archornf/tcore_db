@@ -1,0 +1,2 @@
+tcore_world.sql filter=lfs diff=lfs merge=lfs -text
+world.sql filter=lfs diff=lfs merge=lfs -text

@@ -1,8 +1,8 @@
--- MariaDB dump 10.19-11.0.2-MariaDB, for Linux (x86_64)
+-- MariaDB dump 10.19-11.2.2-MariaDB, for Linux (x86_64)
 --
 -- Host: localhost    Database: auth
 -- ------------------------------------------------------
--- Server version	11.0.2-MariaDB
+-- Server version	11.2.2-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -49,7 +49,7 @@ CREATE TABLE `account` (
   `recruiter` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Account System';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Account System';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -59,7 +59,8 @@ CREATE TABLE `account` (
 LOCK TABLES `account` WRITE;
 /*!40000 ALTER TABLE `account` DISABLE KEYS */;
 INSERT INTO `account` VALUES
-(1,'TCORE','Ç\r?Œ⁄KY-Ãßb´¿‘Sëﬁùµh\nëp–ü¨M','µ˜uˆ*hH˚+ΩkÄKOôÁ”¯óT93‹/tÿ:á','mf˜V\Z=K™·E.å‚Eb.Ñ^\\O∆àé–(∑Û¥o9Zú£¯VØ∏!',NULL,NULL,'','','2023-07-07 09:07:37','192.168.1.222','192.168.1.222',0,0,'00','2023-07-20 16:15:23',0,2,0,'','',0,'Win',0);
+(1,'TCORE','Ç\r?Œ⁄KY-Ãßb´¿‘Sëﬁùµh\nëp–ü¨M','µ˜uˆ*hH˚+ΩkÄKOôÁ”¯óT93‹/tÿ:á','^\Z‰rìw-•±ö¢‰∑≥\'Ïä\0⁄,‘Z◊õΩÁõÊBL¶r¬',NULL,NULL,'','','2023-07-07 09:07:37','127.0.0.1','127.0.0.1',0,0,'00','2023-11-23 20:33:29',0,2,0,'','',0,'Win',0),
+(2,'TCORE2','¥øıÇL\"≠√ÈØ`|BÕ‹pk˙∫ËÇØ∏5F','«√ 	Æ¨SÑÉyvùu–úY≥ÏQbı.æ˘O6⁄ü>','\0\'^$Œpπ‡0Ñ⁄¢ËÔÔp;˜mÿ∞±aõü(ß0Å–Dw',NULL,NULL,'','','2023-10-16 08:27:36','127.0.0.1','127.0.0.1',0,0,'00','2023-10-16 08:27:46',0,2,0,'','',0,'Win',0);
 /*!40000 ALTER TABLE `account` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,7 +87,8 @@ CREATE TABLE `account_access` (
 LOCK TABLES `account_access` WRITE;
 /*!40000 ALTER TABLE `account_access` DISABLE KEYS */;
 INSERT INTO `account_access` VALUES
-(1,3,-1,NULL);
+(1,3,-1,NULL),
+(2,3,-1,NULL);
 /*!40000 ALTER TABLE `account_access` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1894,7 +1896,8 @@ CREATE TABLE `realmcharacters` (
 LOCK TABLES `realmcharacters` WRITE;
 /*!40000 ALTER TABLE `realmcharacters` DISABLE KEYS */;
 INSERT INTO `realmcharacters` VALUES
-(1,1,8);
+(1,1,9),
+(1,2,1);
 /*!40000 ALTER TABLE `realmcharacters` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1930,7 +1933,7 @@ CREATE TABLE `realmlist` (
 LOCK TABLES `realmlist` WRITE;
 /*!40000 ALTER TABLE `realmlist` DISABLE KEYS */;
 INSERT INTO `realmlist` VALUES
-(1,'Trinity','192.168.1.135','127.0.0.1','255.255.255.0',8085,1,0,1,0,0,12340);
+(1,'Trinity','192.168.1.223','127.0.0.1','255.255.255.0',8085,1,0,1,0,0,12340);
 /*!40000 ALTER TABLE `realmlist` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2156,7 +2159,24 @@ INSERT INTO `uptime` VALUES
 (1,1689764051,39614,1,'TrinityCore rev. 5b92674c0678+ 2023-07-06 06:31:15 +0200 (3.3.5 branch) (Unix, Debug, Static)'),
 (1,1689831622,610,0,'TrinityCore rev. 5b92674c0678+ 2023-07-06 06:31:15 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
 (1,1689850445,0,0,'TrinityCore rev. 6873139e0c4d 2023-07-20 12:37:14 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
-(1,1689850472,25809,1,'TrinityCore rev. 6873139e0c4d 2023-07-20 12:37:14 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)');
+(1,1689850472,25809,1,'TrinityCore rev. 6873139e0c4d 2023-07-20 12:37:14 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1690791669,22807,1,'TrinityCore rev. 6873139e0c4d 2023-07-20 12:37:14 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1690866957,13207,0,'TrinityCore rev. 588a615df872 2023-07-31 16:33:36 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1690880880,20407,0,'TrinityCore rev. 7c2b35baaa9e 2023-08-01 10:31:47 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1692854995,61212,1,'TrinityCore rev. 5d3c98a2db34 2023-08-23 12:53:44 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1692943161,612,1,'TrinityCore rev. 5d3c98a2db34+ 2023-08-23 12:53:44 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1692943890,0,0,'TrinityCore rev. 5d3c98a2db34+ 2023-08-23 12:53:44 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1692945468,1810,0,'TrinityCore rev. 5d3c98a2db34+ 2023-08-23 12:53:44 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1693062828,18612,1,'TrinityCore rev. 59e73ee70044+ 2023-08-25 09:20:56 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1695575974,68866,1,'TrinityCore rev. e20c74c87581 2023-09-22 10:24:31 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1697302339,14412,1,'TrinityCore rev. e3d87b93d765 2023-10-13 07:41:10 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1697360676,117206,1,'TrinityCore rev. e3d87b93d765 2023-10-13 07:41:10 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1700410496,0,0,'TrinityCore rev. e3d87b93d765 2023-10-13 07:41:10 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1700469517,0,0,'TrinityCore rev. e3d87b93d765 2023-10-13 07:41:10 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1700472747,35410,1,'TrinityCore rev. e3d87b93d765 2023-10-13 07:41:10 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1700508618,127563,1,'TrinityCore rev. e3d87b93d765 2023-10-13 07:41:10 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1700638072,133380,1,'TrinityCore rev. e3d87b93d765 2023-10-13 07:41:10 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)'),
+(1,1700771588,3007,1,'TrinityCore rev. e3d87b93d765 2023-10-13 07:41:10 +0200 (3.3.5 branch) (Unix, RelWithDebInfo, Static)');
 /*!40000 ALTER TABLE `uptime` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2238,4 +2258,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-31 10:20:10
+-- Dump completed on 2024-01-21 16:31:56
